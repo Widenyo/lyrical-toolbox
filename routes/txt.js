@@ -26,9 +26,7 @@ async function generateAndSend3x3(images, res){
     return res.send({image: canvas.toDataURL()})
 }
 
-router.get('/', (req, res) => {
-  res.render('3x3')
-})
+
 
 router.get('/gen/:user', async (req, res) => {
 
@@ -161,6 +159,10 @@ router.get('/gen/:user', async (req, res) => {
 
 
     return await generateAndSend3x3(images, res)
+})
+
+router.get('/', (_req, res) => {
+  res.render('3x3')
 })
 
 module.exports = router
