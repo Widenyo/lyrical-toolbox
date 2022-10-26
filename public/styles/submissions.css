@@ -1,0 +1,21 @@
+.subpic{
+    height: 250px;
+    width: 250px;
+    object-fit: cover;
+}
+
+body{
+    background-color: black;
+}
+
+a{
+    color: white;
+}
+
+h2{
+    color: white;
+}
+
+.sub{
+    display: inline-block;
+}

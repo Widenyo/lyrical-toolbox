@@ -1,0 +1,27 @@
+#container > *{
+    display: inline-block;
+}
+
+body{
+    background-image: url('/public/fondos/Estrellas\ ANIMADAS\ \(1\).gif');
+}
+
+h2{
+    color: white;
+}
+
+img{
+    border-radius: 1px solid black;
+}
+
+.ir{
+    text-decoration: none;
+    color: #AAAAAA;
+    background-color: #0000AA;
+    padding: 2px;
+}
+
+.ir:hover{
+    background-color: #B30002;
+    color: #A0A037;
+}

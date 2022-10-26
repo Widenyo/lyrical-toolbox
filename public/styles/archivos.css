@@ -1,0 +1,17 @@
+body{
+    background-image: url('/public/fondos/ud1.gif');
+}
+
+body{
+    color: white;
+}
+
+.file{
+    display: inline-block;
+    margin: 15px;
+}
+
+.img{
+    max-width: 300px;
+    max-height: 250px;
+}

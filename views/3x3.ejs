@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("components/head", {style: 'reverse', icon: 'hueylewis', title: 'GENERADOR DE 3X3'}); %>
+<body>
+    <a href="/">Volver...</a>
+    <h2>GENERADOR DE 3X3 ANILIST</h2>
+    <h3 style="color:white;">aca abajo va tu user de anilist</h3>
+        <input type="text" id="user">
+        <button id="anilist">Generar</button>
+        <button id="lastfm">Generar lastfm</button>
+
+    <div id="container">
+
+    </div>
+
+    <script>
+        const anilist = document.getElementById('anilist')
+        const input = document.getElementById('user')
+        const container = document.getElementById('container')
+        const lastfm = document.getElementById('lastfm')
+
+        lastfm.addEventListener('click', async (e) => {
+            console.log(input.value)
+            try{
+            const data = await fetch('<%= process.env.SITE_URL%>/api/3x3/' + input.value + '?plat=lastfm')
+            const parsedData = await data.json()
+            if(!parsedData.Error){
+            container.innerHTML = `
+            <img src="${parsedData.image}">
+            `
+            }else{
+                container.innerHTML = `
+                <h2>${parsedData.Error}</h2>
+                `
+            }
+            }catch(e){
+                console.log(e)
+            }
+        })
+
+        anilist.addEventListener('click', async (e) => {
+            console.log(input.value)
+            try{
+            const data = await fetch('<%= process.env.SITE_URL%>/3x3/gen/' + input.value)
+            const parsedData = await data.json()
+            if(!parsedData.Error){
+            container.innerHTML = `
+            <img src="${parsedData.image}">
+            `
+            }else{
+                container.innerHTML = `
+                <h2>${parsedData.Error}</h2>
+                `
+            }
+            }catch(e){
+                console.log(e)
+            }
+        })
+
+    </script>
+
+</body>
+</html>

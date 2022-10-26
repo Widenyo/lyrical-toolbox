@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("components/head", {style: 'reverse', icon: 'hueylewis', title: 'EN .GIF'}); %>
+<body>
+    <a href="/">Index</a>
+    <form id="buscador">
+        <input type="text" name="url" id="urlinput" value="<%=url%>">
+        <button type="submit">Buscar</button>
+    </form>
+
+    <h2>Darle click a una imagen hace una busqueda reversa en esa imagen. El input tiene que ser una url.</h2>
+
+    <div id="container">
+
+    </div>
+
+    <script src="/public/scripts/reversesearcher.js"></script>
+</body>
+</html>

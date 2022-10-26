@@ -1,0 +1,45 @@
+.profile-pic{
+    object-fit: cover;
+    width: 250px;
+    height: 250px;
+    /* border-radius: 50%; */
+}
+
+.user{
+    display: inline-block;
+    margin: 5px;
+    text-decoration: none;
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.user:visited{
+    color: white;
+}
+
+.user-text{
+    font-size-adjust: auto;
+    font-family: 'Segoe Print';
+    background-color: #0F4082;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    height: 250px;
+    /* border-radius: 50%; */
+    opacity: 0;
+    overflow: hidden;
+  }
+
+  .user-text:hover{
+    transition: 1s;
+    opacity: 1;
+  }
+
+  .iterator{
+    font-size: 36px;
+    background-color: black;
+    color: white;
+  }

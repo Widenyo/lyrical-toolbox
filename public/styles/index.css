@@ -1,0 +1,56 @@
+body{
+    background: url('/public/fondos/---ekaclu03.gif')
+}
+
+.container{
+    background-color: rgb(0, 0, 139, .7);
+    color: rgb(10, 151, 10);
+}
+
+.container >*{
+    margin-left: 5px;
+}
+
+
+
+section{
+    display: inline-block;
+}
+
+.treelink{
+    font-size: 13px;
+}
+
+.boards{
+    margin-left: 20px;
+    vertical-align: top;
+}
+
+.foot > span{
+    color: whitesmoke;
+}
+
+.window{
+    margin-left: 5%;
+}
+
+.flexDiv{
+    display: flex;
+}
+
+#avatar{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.userInfo{
+    vertical-align: top;
+    margin-left: 5%;
+    color: whitesmoke;
+}
+
+article{
+    height: 400px;
+}
