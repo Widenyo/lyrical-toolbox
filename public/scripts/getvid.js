@@ -38,15 +38,14 @@ async function sauceNAO(id){
     const div = document.getElementById(`${id}__saucenao`)
     const url = (anchor.getAttribute('url'))
 
-    const dataReq = await fetch(`/saucenao/search/?url=${url}`)
+    const dataReq = await fetch(`/reverse/sauce/?url=${url}`)
     const data = await dataReq.json()
-    console.log(data)
     let HTML = ""
     for(let i = 0; i < data.length; i++){
         HTML += `
         <div class="sauce">
-        ${data[i].material}: ${data[i].characters}.<br>
-        By: ${data[i].creator}.<br>
+        ${data[i].material ? data[i].material : ""}${data[i].characters ? ": " + data[i].characters + "<br>" : ""}
+        ${data[i].creator ? `By: ${data[i].creator}.<br>` : ""}
         Similarity: ${data[i].similarity}<br>
         `
 

@@ -20,7 +20,7 @@ buscador.addEventListener('submit', (e) => {
 
 async function googleReverse(url){
     try{
-    const data = await fetch('/utils/googlereverse/search?url=' + url)
+    const data = await fetch('/reverse/google/?url=' + url)
     const imagenes = await data.json()
 
     container.innerHTML += `<br>
@@ -46,7 +46,6 @@ async function googleReverse(url){
 
     }catch(e){
         console.log(e)
-        return
     }
 }
 

@@ -2,7 +2,7 @@ const {Router} = require('express')
 const router = Router()
 const axios = require('axios')
 
-router.get('/search', async (req, res) => {
+router.get('/', async (req, res) => {
     const {url} = req.query
     try{
     const reverseGooglereq = await axios.get('https://serpapi.com/search?engine=google_reverse_image&api_key=56c504037c5fd56d960455fc2bbd1d72009ab0c2d9ec3d9b13bbe632e7f77889&image_url=' + url)
@@ -34,14 +34,5 @@ router.get('/search', async (req, res) => {
     }
 })
 
-
-router.get('/', async(req, res) => {
-
-    let url = ""
-    if(req.query.url) url = req.query.url
-
-    res.render("reverseimgsearch.ejs", {url:url})
-
-})
 
 module.exports = router

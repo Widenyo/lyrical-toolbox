@@ -2,7 +2,8 @@ const {Router} = require('express')
 const router = Router()
 const axios = require('axios')
 
-router.get('/search', async (req, res) => {
+router.get('/', async (req, res) => {
+
 
     const {url} = req.query
     try{
@@ -22,6 +23,7 @@ router.get('/search', async (req, res) => {
             }
         )
     })
+    console.log(saucenao)
     return res.send(saucenao)
     }
     catch(e){
